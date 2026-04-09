@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazing Man's Workout Plan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body { margin: 0; background: #090014; color: #fff; font-family: 'Outfit', sans-serif; overflow-x: hidden; }
+        .galaxy-bg { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -2; background: radial-gradient(circle at bottom right, #2a0845 0%, #10002b 40%, #000000 100%); }
+        .clouds { position: fixed; top: 0; left: 0; width: 200vw; height: 200vh; z-index: -1; background-image: radial-gradient(circle at 15% 50%, rgba(138, 43, 226, 0.15) 0%, transparent 50%), radial-gradient(circle at 85% 30%, rgba(255, 0, 128, 0.1) 0%, transparent 50%); animation: drift 40s infinite alternate ease-in-out; pointer-events: none; }
+        @keyframes drift { 0% { transform: translate(0, 0) scale(1); } 100% { transform: translate(-10%, -10%) scale(1.1); } }
+        .stars { width: 2px; height: 2px; background: transparent; box-shadow: 17px 42px #fff, 123px 14px #fff, 42px 90px #fff, 88px 12px #fff, 200px 140px #fff, 300px 50px #fff, 400px 200px #fff, 50px 300px #fff, 150px 250px #fff, 250px 350px #fff, 350px 100px #fff; animation: twinkle 4s infinite alternate; }
+        @keyframes twinkle { 0% { opacity: 0.3; } 100% { opacity: 1; transform: scale(1.2); box-shadow: 17px 42px #d4b3ff, 123px 14px #fff, 42px 90px #ffb3f0, 88px 12px #fff, 200px 140px #d4b3ff, 300px 50px #fff, 400px 200px #ffb3f0; } }
+        .glass-panel { background: rgba(20, 5, 35, 0.5); backdrop-filter: blur(12px); border: 1px solid rgba(138, 43, 226, 0.4); box-shadow: 0 8px 32px 0 rgba(0,0,0,0.5), inset 0 0 20px rgba(138, 43, 226, 0.1); transition: all 0.3s ease; }
+        .glass-panel:hover { border-color: rgba(186, 85, 211, 0.8); box-shadow: 0 8px 40px 0 rgba(138, 43, 226, 0.3); transform: translateY(-3px); }
+        .neon-text { font-family: 'Space Grotesk', sans-serif; color: #fff; text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #e028ff, 0 0 30px #e028ff, 0 0 40px #e028ff; }
+        .acc-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
+        .acc-btn.active .chevron { transform: rotate(180deg); color: #d4a5ff; }
+        .pet { position: fixed; font-size: 2.5rem; z-index: 100; pointer-events: none; animation: floatUp ease-out forwards; }
+        @keyframes floatUp { 0% { transform: translateY(0) scale(0.5) rotate(0deg); opacity: 1; } 100% { transform: translateY(-110vh) scale(1.8) rotate(360deg); opacity: 0; } }
+        ::-webkit-scrollbar { width: 8px; } ::-webkit-scrollbar-track { background: #090014; } ::-webkit-scrollbar-thumb { background: #7b2cbf; border-radius: 10px; }
+        .scroll-mt { scroll-margin-top: 2rem; }
+    </style>
+</head>
+<body class="pb-20">
+
+    <!-- Backgrounds -->
+    <div class="galaxy-bg">
+        <div class="stars" style="top: 10%; left: 20%;"></div>
+        <div class="stars" style="top: 50%; left: 60%; animation-delay: 1s;"></div>
+        <div class="stars" style="top: 80%; left: 30%; animation-delay: 2s;"></div>
+    </div>
+    <div class="clouds"></div>
+
+    <div class="container mx-auto px-4 py-8 max-w-6xl relative z-10">
+        
+        <!-- Header -->
+        <header class="text-center mb-8 pt-6">
+            <div class="inline-block p-3 rounded-full bg-purple-900/40 border border-purple-500/30 mb-4 backdrop-blur-sm">
+                <i class="fas fa-dumbbell text-3xl text-purple-300"></i>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 neon-text tracking-wider uppercase leading-tight">
+                Amazing Man's<br/>Workout Plan
+            </h1>
+            <p class="text-purple-100 max-w-2xl mx-auto text-lg mb-6 font-semibold">
+                Your 6-Day targeted program. Rotate freely, just <strong class="text-fuchsia-400 font-bold">never train the same muscle two days in a row</strong>.
+            </p>
+        </header>
+
+        <!-- Navigation Pills -->
+        <div class="flex flex-wrap justify-center gap-4 mb-8">
+            <a href="#push" class="px-6 py-2 rounded-full bg-fuchsia-600/30 border border-fuchsia-400 hover:bg-fuchsia-600/60 text-white font-bold transition-all shadow-[0_0_15px_rgba(192,38,211,0.4)] hover:shadow-[0_0_20px_rgba(192,38,211,0.8)] hover:scale-105"><i class="fas fa-meteor mr-2 text-fuchsia-200"></i> PUSH</a>
+            <a href="#pull" class="px-6 py-2 rounded-full bg-blue-600/30 border border-blue-400 hover:bg-blue-600/60 text-white font-bold transition-all shadow-[0_0_15px_rgba(37,99,235,0.4)] hover:shadow-[0_0_20px_rgba(37,99,235,0.8)] hover:scale-105"><i class="fas fa-wave-square mr-2 text-blue-200"></i> PULL</a>
+            <a href="#legs" class="px-6 py-2 rounded-full bg-emerald-600/30 border border-emerald-400 hover:bg-emerald-600/60 text-white font-bold transition-all shadow-[0_0_15px_rgba(5,150,105,0.4)] hover:shadow-[0_0_20px_rgba(5,150,105,0.8)] hover:scale-105"><i class="fas fa-bolt mr-2 text-emerald-200"></i> LEGS & CORE</a>
+        </div>
+
+        <!-- Facts Box -->
+        <div class="glass-panel rounded-xl p-4 mb-12 border-t-2 border-purple-400 flex items-center min-h-[80px]">
+            <div class="w-12 text-center text-2xl text-yellow-300"><i class="fas fa-lightbulb animate-pulse"></i></div>
+            <div class="flex-1 px-4">
+                <p id="fun-fact" class="text-base md:text-lg text-white font-bold transition-opacity duration-500">Loading secrets...</p>
+            </div>
+        </div>
+
+        <!-- Workouts Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+            <!-- PUSH -->
+            <div id="push" class="scroll-mt glass-panel rounded-3xl overflow-hidden flex flex-col border-fuchsia-500/50">
+                <div class="bg-gradient-to-r from-fuchsia-900 to-purple-900 p-6 border-b border-fuchsia-400/30">
+                    <h2 class="text-3xl font-extrabold text-white drop-shadow-md font-['Space_Grotesk']"><span class="bg-fuchsia-400/30 p-2 rounded-lg mr-2"><i class="fas fa-meteor"></i></span> PUSH</h2>
+                    <p class="text-fuchsia-200 font-bold mt-2">Chest, Shoulders, Triceps</p>
+                </div>
+                <div class="p-2">
+                    <button class="acc-btn w-full text-left p-4 flex justify-between items-center hover:bg-white/10 rounded-xl transition"><span class="font-bold text-lg text-white"><i class="fas fa-fire text-orange-400 mr-2"></i> Warmup (3-5m)</span><i class="fas fa-chevron-down chevron text-white transition-transform duration-300"></i></button>
+                    <div class="acc-content px-4">
+                        <ul class="list-disc ml-5 text-white space-y-2 pb-4 font-semibold text-base">
+                            <li><strong class="text-fuchsia-300">Arm Circles:</strong> 15 fwd, 15 back.</li>
+                            <li><strong class="text-fuchsia-300">Band Pull-Aparts:</strong> 2x15 reps.</li>
+                            <li><strong class="text-fuchsia-300">Plank to Down Dog:</strong> 5 reps.</li>
+                        </ul>
+                    </div>
+                    <button class="acc-btn w-full text-left p-4 flex justify-between items-center hover:bg-white/10 rounded-xl transition mt-1"><span class="font-bold text-lg text-white"><i class="fas fa-dumbbell text-fuchsia-400 mr-2"></i> Main Workout</span><i class="fas fa-chevron-down chevron text-white transition-transform duration-300"></i></button>
+                    <div class="acc-content px-4">
+                        <ul class="space-y-3 pb-4 text-white font-semibold">
+                            <li class="bg-black/50 p-3 rounded-lg border border-fuchsia-500/30"><span class="block text-fuchsia-300 font-extrabold text-lg mb-1">1. DB Bench Press</span><span class="bg-white/20 px-2 py-1 rounded inline-block mb-1 text-sm">4 x 8–10 reps</span><span class="block text-gray-300 text-sm">Tuck elbows at 45°.</span></li>
+                            <li class="bg-black/50 p-3 rounded-lg border border-fuchsia-500/30"><span class="block text-fuchsia-300 font-extrabold text-lg mb-1">2. Seated Shoulder Press</span><span class="bg-white/20 px-2 py-1 rounded inline-block mb-1 text-sm">3 x 10–12 reps</span><span class="block text-gray-300 text-sm">Sit upright for back safety.</span></li>
+                            <li class="bg-black/50 p-3 rounded-lg border border-fuchsia-500/30"><span class="block text-fuchsia-300 font-extrabold text-lg mb-1">3. DB Incline/Flat Flyes</span><span class="bg-white/20 px-2 py-1 rounded inline-block mb-1 text-sm">3 x 12 reps</span></li>
+                            <li class="bg-black/50 p-3 rounded-lg border border-fuchsia-500/30"><span class="block text-fuchsia-300 font-extrabold text-lg mb-1">4. Lateral Raises</span><span class="bg-white/20 px-2 py-1 rounded inline-block mb-1 text-sm">4 x 15 reps</span></li>
+                            <li class="bg-black/50 p-3 rounded-lg border border-fuchsia-500/30"><span class="block text-fuchsia-300 font-extrabold text-lg mb-1">5. Close-Grip DB Press</span><span class="bg-white/20 px-2 py-1 rounded inline-block mb-1 text-sm">3 x 12–15 reps</span></li>
+                            <li class="bg-black/50 p-3 rounded-lg border border-fuchsia-500/30"><span class="block text-fuchsia-300 font-extrabold text-lg mb-1">6. Overhead Tricep Ext.</span><span class="bg-white/20 px-2 py-1 rounded inline-block text-sm">3 x 10–12 reps</span></li>
+                        </ul>
+                    </div>
+                    <button class="acc-btn w-full text-left p-4 flex justify-between items-center hover:bg-white/10 rounded-xl transition mt-1"><span class="font-bold text-lg text-white"><i class="fas fa-snowflake text-teal-400 mr-2"></i> Cooldown</span><i class="fas fa-chevron-down chevron text-white transition-transform duration-300"></i></button>
+                    <div class="acc-content px-4">
+                        <ul class="list-disc ml-5 text-white space-y-2 pb-4 font-semibold text-sm">
+                            <li>Doorway Chest Stretch</li>
+                            <li>Cross-Body Shoulder Stretch</li>
+                            <li>Overhead Tricep Stretch</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PULL -->
+            <div id="pull" class="scroll-mt glass-panel rounded-3xl overflow-hidden flex flex-col border-blue-500/50">
+                <div class="bg-gradient-to-r from-blue-900 to-indigo-900 p-6 border-b border-blue-400/30">
+                    <h2 class="text-3xl font-extrabold text-white drop-shadow-md font-['Space_Grotesk']"><span class="bg-blue-400/30 p-2 rounded-lg mr-2"><i class="fas fa-wave-square"></i></span> PULL</h2>
+                    <p class="text-blue-200 font-bold mt-2">Back, Biceps, Rear Delts</p>
+                </div>
+                <div class="p-2">
+                    <button class="acc-btn w-full text-left p-4 flex justify-between items-center hover:bg-white/10 rounded-xl transition"><span class="font-bold text-lg text-white"><i class="fas fa-fire text-orange-400 mr-2"></i> Warmup (3-5m)</span><i class="fas fa-chevron-down chevron text-white transition-transform duration-300"></i></button>
+                    <div class="acc-content px-4">
+                        <ul class="list-disc ml-5 text-white space-y-2 pb-4 font-semibold text-base">
+                            <li><strong class="text-blue-300">Cat-Cow Flexion:</strong> 10 reps.</li>
+                            <li><strong class="text-blue-300">Straight-Arm Pulldowns:</strong> 2x15.</li>
+                            <li><strong class="text-blue-300">Light DB Curls:</strong> 1x15.</li>
+                        </ul>
+                    </div>
+                    <button class="acc-btn w-full text-left p-4 flex justify-between items-center hover:bg-white/10 rounded-xl transition mt-1"><span class="font-bold text-lg text-white"><i class="fas fa-dumbbell text-blue-400 mr-2"></i> Main Workout</span><i class="fas fa-chevron-down chevron text-white transition-transform duration-300"></i></button>
+                    <div class="acc-content px-4">
+                        <ul class="space-y-3 pb-4 text-white font-semibold">
+                            <li class="bg-black/50 p-3 rounded-lg border border-blue-500/30"><span class="block text-blue-300 font-extrabold text-lg mb-1">1. Chest-Supported Rows</span><span class="bg-white/20 px-2 py-1 rounded inline-block mb-1 text-sm">4 x 10–12 reps</span><span class="block text-gray-300 text-sm">Bench at 45° keeps pelvis safe.</span></li>
+                            <li class="bg-black/50 p-3 rounded-lg border border-blue-500/30"><span class="block text-blue-300 font-extrabold text-lg mb-1">2. DB Pullovers</span><span class="bg-white/20 px-2 py-1 rounded inline-block mb-1 text-sm">3 x 10–12 reps</span></li>
+                            <li class="bg-black/50 p-3 rounded-lg border border-blue-500/30"><span class="block text-blue-300 font-extrabold text-lg mb-1">3. Band Pull-Aparts</span><span class="bg-white/20 px-2 py-1 rounded inline-block mb-1 text-sm">3 x 15 reps</span></li>
+                            <li class="bg-black/50 p-3 rounded-lg border border-blue-500/30"><span class="block text-blue-300 font-extrabold text-lg mb-1">4. DB Hammer Curls</span><span class="bg-white/20 px-2 py-1 rounded inline-block mb-1 text-sm">3 x 10–12 reps</span></li>
+                            <li class="bg-black/50 p-3 rounded-lg border border-blue-500/30"><span class="block text-blue-300 font-extrabold text-lg mb-1">5. Supinated Bicep Curls</span><span class="bg-white/20 px-2 py-1 rounded inline-block text-sm">3 x 10–12 reps</span></li>
+                        </ul>
+                    </div>
+                    <button class="acc-btn w-full text-left p-4 flex justify-between items-center hover:bg-white/10 rounded-xl transition mt-1"><span class="font-bold text-lg text-white"><i class="fas fa-snowflake text-teal-400 mr-2"></i> Cooldown</span><i class="fas fa-chevron-down chevron text-white transition-transform duration-300"></i></button>
+                    <div class="acc-content px-4">
+                        <ul class="list-disc ml-5 text-white space-y-2 pb-4 font-semibold text-sm">
+                            <li>Doorframe Lat Stretch</li>
+                            <li>Wall Bicep Stretch</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LEGS -->
+            <div id="legs" class="scroll-mt glass-panel rounded-3xl overflow-hidden flex flex-col border-emerald-500/50">
+                <div class="bg-gradient-to-r from-emerald-900 to-teal-900 p-6 border-b border-emerald-400/30">
+                    <h2 class="text-3xl font-extrabold text-white drop-shadow-md font-['Space_Grotesk']"><span class="bg-emerald-400/30 p-2 rounded-lg mr-2"><i class="fas fa-bolt"></i></span> LEGS & CORE</h2>
+                    <p class="text-emerald-200 font-bold mt-2">Quads, Hams, Calves, Abs</p>
+                </div>
+                <div class="p-2">
+                    <button class="acc-btn w-full text-left p-4 flex justify-between items-center hover:bg-white/10 rounded-xl transition"><span class="font-bold text-lg text-white"><i class="fas fa-fire text-orange-400 mr-2"></i> Warmup (5m)</span><i class="fas fa-chevron-down chevron text-white transition-transform duration-300"></i></button>
+                    <div class="acc-content px-4">
+                        <ul class="list-disc ml-5 text-white space-y-2 pb-4 font-semibold text-base">
+                            <li><strong class="text-emerald-300">BW Glute Bridges:</strong> 2x15 reps.</li>
+                            <li><strong class="text-emerald-300">World’s Greatest Stretch:</strong> 5/side.</li>
+                            <li><strong class="text-emerald-300">Bodyweight Squats:</strong> 1x15 reps.</li>
+                        </ul>
+                    </div>
+                    <button class="acc-btn w-full text-left p-4 flex justify-between items-center hover:bg-white/10 rounded-xl transition mt-1"><span class="font-bold text-lg text-white"><i class="fas fa-dumbbell text-emerald-400 mr-2"></i> Main Workout</span><i class="fas fa-chevron-down chevron text-white transition-transform duration-300"></i></button>
+                    <div class="acc-content px-4">
+                        <ul class="space-y-3 pb-4 text-white font-semibold">
+                            <li class="bg-black/50 p-3 rounded-lg border border-emerald-500/30"><span class="block text-emerald-300 font-extrabold text-lg mb-1">1. DB Goblet Squats</span><span class="bg-white/20 px-2 py-1 rounded inline-block mb-1 text-sm">4 x 10–12 reps</span><span class="block text-gray-300 text-sm">Hold heavy DB at chest.</span></li>
+                            <li class="bg-black/50 p-3 rounded-lg border border-emerald-500/30"><span class="block text-emerald-300 font-extrabold text-lg mb-1">2. Romanian Deadlifts</span><span class="bg-white/20 px-2 py-1 rounded inline-block mb-1 text-sm">4 x 10–12 reps</span><span class="block text-gray-300 text-sm">Push hips back, feel stretch.</span></li>
+                            <li class="bg-black/50 p-3 rounded-lg border border-emerald-500/30"><span class="block text-emerald-300 font-extrabold text-lg mb-1">3. DB Glute Bridges</span><span class="bg-white/20 px-2 py-1 rounded inline-block mb-1 text-sm">3 x 12–15 reps</span></li>
+                            <li class="bg-black/50 p-3 rounded-lg border border-emerald-500/30"><span class="block text-emerald-300 font-extrabold text-lg mb-1">4. Standing Calf Raises</span><span class="bg-white/20 px-2 py-1 rounded inline-block mb-1 text-sm">4 x 15–20 reps</span></li>
+                            <li class="bg-black/50 p-3 rounded-lg border border-emerald-500/30"><span class="block text-emerald-300 font-extrabold text-lg mb-1">5. Dead Bugs & Plank</span><span class="bg-white/20 px-2 py-1 rounded inline-block text-sm">3x10 (Bugs) + 3x60s (Plank)</span></li>
+                        </ul>
+                    </div>
+                    <button class="acc-btn w-full text-left p-4 flex justify-between items-center hover:bg-white/10 rounded-xl transition mt-1"><span class="font-bold text-lg text-white"><i class="fas fa-snowflake text-teal-400 mr-2"></i> Cooldown</span><i class="fas fa-chevron-down chevron text-white transition-transform duration-300"></i></button>
+                    <div class="acc-content px-4">
+                        <ul class="list-disc ml-5 text-white space-y-2 pb-4 font-semibold text-sm">
+                            <li>Kneeling Couch Stretch</li>
+                            <li>Seated Hamstring Stretch</li>
+                            <li>Lying Glute Stretch</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Motivation Button (Paw) -->
+    <button id="petBtn" class="fixed bottom-6 right-6 z-50 bg-fuchsia-600 hover:bg-fuchsia-500 text-white p-5 rounded-full shadow-[0_0_20px_#e028ff] transition-transform hover:scale-110 group">
+        <i class="fas fa-paw text-3xl group-hover:animate-bounce"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script>
+        // 1. Accordions Setup
+        document.querySelectorAll(".acc-btn").forEach(btn => {
+            if(btn.innerHTML.includes('Main Workout')) {
+                btn.classList.add("active");
+                btn.nextElementSibling.style.maxHeight = btn.nextElementSibling.scrollHeight + "px";
+            }
+            btn.addEventListener("click", function() {
+                this.classList.toggle("active");
+                let panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        });
+
+        // 2. 50 Fun Facts Array (Compressed string array to save space)
+        const facts = ["A shrimp's heart is in its head.", "A snail can sleep for 3 years.", "Sloths hold breath for 40 mins.", "Elephants are the only mammals that can't jump.", "Rhino horns are made of keratin.", "Frogs must blink to swallow food.", "A blue whale's tongue weighs as much as an adult elephant.", "The Stegosaurus had a brain the size of a walnut.", "Octopuses have 3 hearts and blue blood.", "Axolotls can regenerate their brains.", "Crows hold lifelong grudges.", "Pigeons can understand basic math.", "Mantis Shrimp punch with the speed of a bullet.", "Wombat poop is cube-shaped.", "Sea otters hold hands when they sleep.", "A group of flamingos is a 'flamboyance'.", "Tardigrades can survive outer space.", "T-Rex lived closer in time to humans than Stegosaurus.", "Butterflies taste with their feet.", "A flea can jump 350 times its body length.", "Hummingbirds fly backwards.", "Koalas have human-like fingerprints.", "Sharks have been on Earth longer than trees.", "The fingerprints of a koala confused crime scenes.", "A grizzly bear's bite crushes a bowling ball.", "Owls have eye tubes, not eyeballs.", "Cows have best friends.", "Some turtles can breathe through their butts.", "The immortal jellyfish can live forever.", "A cheetah goes 0 to 60 mph in 3 seconds.", "Hippos sweat natural sunscreen.", "Cats cannot taste sweet things.", "Dogs smell 100k times better than humans.", "The colossal squid has dinner-plate-sized eyes.", "Pigs cannot look up into the sky.", "Crocodiles cannot stick their tongues out.", "Ostrich eyes are bigger than their brains.", "Bats are the only mammals that fly.", "Penguins propose with a pebble.", "Dolphins have names for each other.", "Male seahorses get pregnant.", "Snapping turtle tongues look like worms to lure fish.", "Honeybees can recognize human faces.", "A group of porcupines is a 'prickle'.", "Sloths take a month to digest food.", "Giraffes have 7 neck vertebrae, like humans.", "The sperm whale is the loudest animal.", "Vampire bats share blood.", "Snow leopards puff instead of roaring.", "Platypuses don't have stomachs."];
+        
+        const factText = document.getElementById('fun-fact');
+        function nextFact() {
+            factText.style.opacity = '0';
+            setTimeout(() => {
+                factText.innerText = "Did you know? " + facts[Math.floor(Math.random() * facts.length)];
+                factText.style.opacity = '1';
+            }, 500);
+        }
+        nextFact(); // Run immediately
+        setInterval(nextFact, 7500); // Change every 7.5 seconds
+
+        // 3. Exploding Motivation Animals (Triggered by bottom right button)
+        const pets = ['🐱','🐶','🦜','🐠','🦖','🦈','🦅','🦕','🐈','🐕','🐬','🐧','🐅','🐘','🐙','🐢','🐊','🦍','🦘','🦋'];
+        const petBtn = document.getElementById('petBtn');
+        
+        petBtn.addEventListener('click', (e) => {
+            const num = Math.floor(Math.random() * 10) + 15; // 15 to 25 animals
+            const rect = petBtn.getBoundingClientRect();
+            
+            for(let i=0; i<num; i++) {
+                let p = document.createElement('div');
+                p.className = 'pet';
+                p.innerText = pets[Math.floor(Math.random() * pets.length)];
+                
+                // Explode outwards from the button
+                const spreadX = (Math.random() - 0.5) * window.innerWidth * 0.8; 
+                p.style.left = (rect.left + spreadX) + 'px';
+                p.style.top = rect.top + 'px';
+                
+                // Random speed
+                let dur = 2 + Math.random() * 3;
+                p.style.animationDuration = dur + 's';
+                
+                document.body.appendChild(p);
+                
+                // Remove from DOM after animation
+                setTimeout(() => p.remove(), dur * 1000);
+            }
+            
+            // Pop effect on button
+            petBtn.style.transform = 'scale(0.85)';
+            setTimeout(() => petBtn.style.transform = '', 150);
+        });
+    </script>
+</body>
+</html>
